@@ -1,3 +1,7 @@
+html {
+    
+}
+
 header {
     box-sizing: border-box;
     top: 0;
@@ -35,35 +39,60 @@ header * {
 
 body {
     /* background-color: rgb(233, 232, 231);  */
-    font-family: sans-serif;
-    background-color: #E4E0EE;
-    width: 80%;
+    font-family: 'Raleway';
+    /* background-color: #E4E0EE; */
+    background-color: white;
+    width: 95%;
+    padding: 2%;
     
 }
+
+hr {
+    height:10px;
+    /* border-width:0; */
+    /* background-color: #6D597A;
+    background-color: #E4E0EE; */
+    
+  }
+
+  .hr {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
 
 .content {
     /* display: flex; */
-    border: solid;
+    /* border: solid; */
     
 }
 
-.question {
+.text {
     
     height: fit-content;
-}
-
-.about {   
+    /* width: 100%; */
+    /* border: solid; */
     display: flex;
     flex-direction: column;
 }
 
+.secs {   
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    /* border: solid; */
+    
+}
+
 .purple {
-    color: rgb(164, 149, 195);
+    /* color: rgb(164, 149, 195); */
+    color: #8571AA;
 }
 
 section {
     box-sizing: border-box;
     margin-bottom: 15px;
+    background: white;
 }
 
 section *{
@@ -76,18 +105,24 @@ section *{
     height: 200px;
     border-radius: 50%;
   
-    border: solid #E4E0EE;
+    border: solid black;
+    /* border: solid white; */
     border-width: 6px;
+    margin-bottom: 25px;
 }
 
 .recpic {
+    padding-top: 50px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border: solid;
+    
 }
 
 .recs {
+    
+    /* border: solid; */
     position: fixed;
     left: 0;
     top: 0;
@@ -95,26 +130,55 @@ section *{
     height: 100%;
     width: 275px;
     /* background-color: #4E2A84; */
-    background-color: #B6ACD1;
-    background-color: rgb(164, 149, 195);
+    /* background-color: #B6ACD1;
+    background-color: rgb(164, 149, 195); */
+    /* background-color: #6D597A; */
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
     margin: none;   
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.white {
+    color: white;
+    /* color: red; */
+    font-family: 'Raleway';
+    font-weight: lighter;
+    font-size: medium;
+}
+
+
+
 .recheader {
+    padding-top:100px;
     width: 100%;
-    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-    border: solid;
-    /* justify-content: center;
-    text-align: center; */
     align-items: center;
+    
 }
 
 
 
 .typewrite {
-    color: black;
+    color: #8571AA;
+
+    /* color: rgb(164, 149, 195); */
     height: 30px;
 }
 
@@ -122,6 +186,7 @@ section *{
 .name {
     font-weight: 600;
     font-size: 36pt;
+    font-family: 'Saira Extra Condensed', serif;
     
 }
 .first {
@@ -129,21 +194,82 @@ section *{
     padding-right: .2em;
 }
 .last {
-    color: rgb(164, 149, 195);
+    /* color: rgb(164, 149, 195); */
+    /* color: #6D597A; */
+    color: #8571AA;
+
 }
 
+
 .buttons {
-    padding: 2%;
+    padding: 2%  2%  2% 0%;
     gap: 2%;
-    color: rgb(164, 149, 195);
+    /* color: rgb(164, 149, 195); */
+    color: #B56576;
 }   
 
 .fa-linkedin, .fa-github, .fa-envelope {
+    /* color: rgb(164, 149, 195); */
+    /* color: #6D597A;
+    background: rgb(164, 149, 195); */
     color: rgb(164, 149, 195);
+    color: #E4E0EE;
+    color: #8571AA;
+    /* color: #6D597A; */
+    background: black;
+    /* border: solid; */
+    height: 20px;
+    width: 40px;
+    padding-top: 20px;
+    /* padding-left: 20px; */
+    align-items: center;
+    text-align: center;
+    border-radius: 25%;
 }
+
 
 .navigation {
     color: black;
+}
+
+.apps {
+    width: 98%;
+}
+
+.app-description {
+    margin-left: 25%;
+    border: solid;
+}
+
+.dininginformant {
+    width: 100%;
+}
+
+.di1 {
+    width: 200%;
+    max-width: 300px;
+    height: fit-content;
+    margin-right: 2%;
+    /* border: solid; */
+    
+}
+
+.zendog {
+    margin-left: 2%;
+    width: 100%;
+}
+
+.zd1 {
+    /* width: 55%;
+    max-width: 300px;
+    height: fit-content;
+    margin-right: 2%; */
+    width: 200%;
+    max-width: 300px;
+    height: fit-content;
+    margin-right: 2%;
+    /* border: solid; */
+    
 }
 
 .suggestionsforyou{
@@ -198,7 +324,7 @@ section *{
     display: flex;
     flex-direction: column;
     padding:1%;
-    background-color: #E4E0EE;
+    /* background-color: #E4E0EE; */
 }
 
 .cards * {
