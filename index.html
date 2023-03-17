@@ -12,24 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <script src="https://kit.fontawesome.com/cd64c10d5e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" charset="utf-"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.app-button').click(function() {
+                $(this).next('.app-about').slideToggle();
+                console.log('word')
+            })
+        }) 
+    </script>
 </head>
-
-<!-- <header>
-    <section class="newbar">
-        <div class="newleft">
-            <h2> Photo App </h2>
-        </div>
-        <div class="newright">
-            <div class="newuser">
-                <h1> gibsonjack </h1>
-            </div>
-            <div class="newsignout">
-                <a href = "#"> Sign out </a>
-            </div>
-        </div>
-    </section>
-</header> -->
 
 <body>
     <section class="recs">
@@ -44,9 +38,6 @@
             <a href="#skills" class="navigation">
                 <h2 class="white"> SKILLS </h2>
             </a>
-            <a href="#contact" class="navigation">
-                <h2 class="white"> CONTACT </h2>
-            </a>
         </div>      
     </section>
     <section class="cards">
@@ -60,9 +51,7 @@
         </div>    
         <div class="type"> 
             <h1>
-                <a href="" class="typewrite" data-period="2000" data-type='[ "Student.", "Engineer." ]'>
-                  <span class="wrap"></span>
-                </a>
+                Computer Science, Economics, and Classics Student at Northwestern University
             </h1>
         </div> 
     
@@ -78,71 +67,261 @@
             </a>
         </div>
     </section>
-    <hr class="hr2">
-    <section class="content">
-        <div class="secs" id="about">
-            <h1 class="purple">About</h1>
-            <div class="text">
-            I am fourth-year student at Northwestern University studying Computer Science, Economics, and Classics.
-            I am President of Northwestern's Women's Club Basketball and Field Hockey teams.
-            </div> 
-        </div>
-    </section>
         <hr class="hr2">
         <section class="content">
         <div class="secs" id="projects">
             <h1 class="purple">Projects</h1>
             <div class="apps">
                 <div class="dininginformant">
-                    <!-- <img class="di1"src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\dihome.PNG"> -->
+        
                     <div class="app-show">
-                    <!-- <a href="www.comingsoon.com" id="slider" > -->
                         <img  class="di1"id="mainPhoto" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/dihome.PNG">
-                        <!-- <div>
-                          
-                          <img   src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\di2.PNG" style="display: none">
-                          <img   src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\di3.PNG" style="display: none">
-                          <img   src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\dihome.PNG" style="display: none">
-                        </div> -->
-                      <!-- </a> -->
                     </div>
-                    <!-- <div class="app-description">
-                    aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa
-                    </div> -->
                     <div class="app-description"> 
-                        <button class="app-button" onclick="choose('di')">Dining Informant</button>
-                        <button class="app-button" onclick="choose('zd')">Zen Dog</button>
-                        <button class="app-button" onclick="choose('ig')">Photo App</button>
-                    </div>
-
+                        <div class="app-item">
+                            <span class="app-button" onclick="choose('di')">   
+                                Dining Informant 
+                            </span>
+                            <div class="app-about">
+                                this is a description for dining informant
+                            </div>
+                        </div>
+                        <div class="app-item">
+                            <span class="app-button" onclick="choose('zd')">Zen Dog</span>
+                            <div class="app-about">
+                                this is a description for zen dog
+                            </div>
+                        </div>
+                        <div class="app-item">
+                            <span class="app-button" onclick="choose('ig')"> Photo App</span>
+                            <div class="app-about">
+                                this is a description for photo app
+                            </div>
+                        </div>
+                        <div class="app-item">
+                            <span class="app-button" onclick="choose('di')">ColorSomeThings.com</span>
+                            <div class="app-about">
+                                this is a description for colorsomethings.com
+                            </div>
+                        </div>
+               </div>
                 </div>
             </div>
             <div class="text">   
             </div> 
         </div> 
     </section>
+    <hr class="hr2">
+    <section class="content">
+        <div class="secs" id="about">
+            <h1 class="purple">About</h1>
+            <div class="text">
+            I am in my fourth year studying at Northwestern University. I am pursuing a double major in Computer 
+            Science and Economics and a minor in Classics with a Latin Concentration with an expected Graduation 
+            Date of June 2023.
+            I am President and Captain of Northwestern's Women's Club Basketball and Field Hockey teams. Currently, 
+            I am in my 6th quarter as a Peer-Guided Study Group Facilitator, where I guide small groups of students
+            through the weekly material for a specific course I have found success in. I have
+            also served as a Peer Adviser for small groups of Northwestern's Class of 2025 and 2026.  
+            </div> 
+        </div>
+    </section>
         <hr class="hr3">
         <section class="content">
         <div class="secs" id ="skills">
             <h1 class="purple">Skills</h1>
-            <div class="ig-follow-div">
-        
+            <div class="skills-all">
+                <div class="skills-list">
+                    <div class="skills-icon">      
+                        <i class="devicon-html5-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        HTML5
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">      
+    
+                        <i class="devicon-css3-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        CSS
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">     
+                        <i class="devicon-javascript-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        Javascript
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">     
+                        <i class="devicon-cplusplus-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        C++
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">     
+                        
+                        <i class="devicon-c-plain"></i>
+                        
+                    </div>
+                    <div class="skills-name">
+                        C
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">        
+                        <i class="devicon-materialui-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        MaterialUI
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">     
+                        <i class="devicon-git-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        Git
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">     
+                        <i class="devicon-java-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        Java
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">
+                        <i class="devicon-vscode-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        VS Code
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">
+                        <i class="devicon-react-original"></i>
+                    </div>
+                    <div class="skills-name">
+                        React
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">   
+                        <i class="devicon-python-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        Python
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">   
+                        <i class="devicon-postgresql-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        PostgreSQL
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-icon">    
+                        <i class="devicon-nodejs-plain"></i>
+                    </div>
+                    <div class="skills-name">
+                        Nodejs
+                    </div>
+                </div>
+            </div>
+            <div class="coursework">
+                <div>
+                    <h1 class="purple"> Coursework</h1>
+                </div>
+                <div class="all-courses">
+                    <div class="courses-section">
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Agile Software Dev
+                            </div>
+                            
+                        </div>
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Web Development
+                            </div>
+                        </div>
+                        <div class="course"> 
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Algorithm Design/Analysis
+                            </div>
+                        </div>
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Programming Languages
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="courses-section">
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Generative Methods
+                            </div>
+                        </div>
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Computer Graphics
+                            </div>
+                        </div>
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Artificial Intelligence
+                            </div>
+                        </div>
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Social AR/VR
+                            </div>
+                        </div>
+                    </div>
+                   <div class="courses-section">
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Data Science
+                            </div>
+                        </div>
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Game Design and Dev
+                            </div>   
+                        </div>
+                        <div class="course">
+                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <div class="coursename">
+                                Operating Systems
+                            </div>
+                        </div>  
+                   </div>
+                   <div class="courses-section">
+                   </div>
+                </div>
             </div>
         </div> 
-    </section>
-        <hr class="hr4">
-        <section class="content">
-        <div class="secs" id="contact">
-            <h1 class="purple">Contacts</h1>
-            <div class="text">
-           
-            </div>
-        </div> 
-    </section>
     </body>
     <script src="script.js"></script>
 </html>

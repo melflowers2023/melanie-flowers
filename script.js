@@ -89,27 +89,27 @@ function choose(choice) {
     console.log(choice)
     if (choice == 'zd') {
         photos = images2;
-        index = 2;
-        clearInterval();
-        setInterval(change, 3000);
+        // index = 2;
+        // clearInterval();
+        // setInterval(change, 3000);
         size = 'di1';
     }
     else if (choice == 'ig') {
         photos = images3;
         index = 2;
         console.log(interval)
-        interval = 7000;
-        clearInterval();
-        setInterval(change, 7000);
+        // interval = 7000;
+        // clearInterval();
+        // setInterval(change, 7000);
         console.log(interval);
         size = 'ig1';
         
     }
     else {
         photos = images;
-        index = 2;
-        clearInterval();
-        setInterval(change, 3000);
+        // index = 2;
+        // clearInterval();
+        // setInterval(change, 3000);
         size = 'di1';
     }
     
