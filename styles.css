@@ -1,7 +1,8 @@
 :root {
     /* THEME COLORS */
     --first-color: black;
-    --second-color: #8571AA;
+    --second-color: white;
+    --third-color: #8571AA;
     --third-color: ;
 
     /* HOVER COLOR */
@@ -34,20 +35,107 @@
 
 }
 
+.html {
+    overflow-x: hidden;
+    
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        color: #e73c7e;
+    }
+    50% {
+        background-position: 100% 50%;
+        color: #23a6d5;
+    }
+    100% {
+        background-position: 0% 50%;
+        color: #e73c7e
+    }
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1%;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(-45deg, #e73c7e, #23a6d5);
+    /* background-size: 400% 400%; */
+    /* animation: gradient 15s ease infinite; */
+    margin: none;   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* color: white; */
+    font-weight: lighter;
+    font-size: medium;
+    font-family: 'Open Sans', serif;
+}
+
+.header-left {
+    width: 50%;
+    /* border: solid; */
+    color: var(--second-color);
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-left: 25px;
+    
+
+}
+
+.header-right {
+   /* margin-left: 70%; */
+   width: 50%;
+   /* border: solid; */
+   display: flex;
+  
+   /* align-items: right; */
+   justify-content: right;
+   font-weight: 500;
+   color: var(--second-color);
+}
+
+.header-right a:hover {
+    color: black;
+}
+
+.navigation {
+    color: white;
+    margin-right: 25px;
+    /* border: solid; */
+}
+
+
+
 body {
     font-family: 'sans-serif';
     font-family: 'Open Sans', serif;
-    background-color: white;
-    width: 95%;
+    background-color: var(--body-bg-color);
+
+    width: 96%;
     padding: 2%;
+    margin-top: 70px;
+    overflow-x: hidden;
 }
 
 hr {
-    height:10px;
+    height:15px;
     background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    border-radius: 25%;
+    /* background-size: 400% 400%;
+    animation: gradient 15s ease infinite; */
+    /* border-radius: 25%; */
+    width: 100%;
+    overflow-x: hidden;
+    margin-left: -4%;
+    border: solid;
+
+  }
+
+  href {
+    color: white;
   }
 
   h2 {
@@ -98,34 +186,9 @@ section *{
     margin-bottom: 25px;
 }
 
-.recs {
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 1%;
-    height: 100%;
-    width: 275px;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    margin: none;   
-    font-family: 'Open Sans', serif;
-}
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-        color: #e73c7e;
-    }
-    50% {
-        background-position: 100% 50%;
-        color: #23a6d5;
-    }
-    100% {
-        background-position: 0% 50%;
-        color: #e73c7e
-    }
-}
+
+
 
 .white {
     color: white;
@@ -135,26 +198,9 @@ section *{
     font-family: 'Open Sans', serif;
 }
 
-.recheader {
-    padding-top:100px;
-    width: 100%;
-    font-family: 'Raleway', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.type {
-    /* color: #8571AA; */
-    margin-left: -2%;
-}
 
-.typewrite {
-    color: #8571AA;
-    margin-left: -2%;
-    height: 30px;
-    padding: none;
-}
+
 
 
 .name {
@@ -167,11 +213,11 @@ section *{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin: -2%;
+    /* margin: -2%; */
     
 }
 .first {
-    color: black;
+    color: var(--second-color);
     padding-right: .2em;
 }
 .last {
@@ -185,18 +231,17 @@ section *{
             -webkit-background-clip: text;
     /* animation: gradient 1s infinite; */
     animation: gradient 5s ease infinite;
+    /* background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; */
 
 }
 
 
-.buttons {
-    padding: 2%  2%  2% 0%;
-    gap: 2%;
-    /* color: rgb(164, 149, 195); */
-    color: #B56576;
-    margin-left: -2%;
-    margin: -3% -2% -2% -2%;
-}   
+ 
 
 .fa-linkedin, .fa-github, .fa-envelope {
     color: rgb(164, 149, 195);
@@ -212,9 +257,7 @@ section *{
 }
 
 
-.navigation {
-    color: black;
-}
+
 
 .apps {
     width: 98%;
@@ -231,7 +274,7 @@ section *{
     /* background: rgba(133, 113, 170, 0.5); */
     
     background: rgba(211, 211, 211, 0.5);
-    backdrop-filter: blur(15px);
+    /* backdrop-filter: blur(15px); */
     border-radius: 25px;
 }
 
@@ -412,30 +455,174 @@ span {
     color: #8571AA;
    }
 
-.cards {
+.home {
+    min-height: 85vh;
+    border: solid;
     display: flex;
     flex-direction: column;
-    padding:1%;
+    background-color: var(--body-bg-color);
+}
+
+.home-top {
+    /* position: relative; */
+    
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: flex;
+    flex-direction: row;
+    /* padding:1%; */
     top: 0;
     left: 0;
+    height: 900%;
+    width: 100%;
+    border: solid;
 }
+
+.home-left {
+    width: 10%;
+}
+
+.home-middle {
+    width: 50%;
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.home-right {
+    width: 300px;
+    height: 300px;
+    /* border: solid; */
+    border-radius: 50%;
+    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    /* background-size: 400% 400%; */
+    /* animation: gradient 15s ease infinite; */
+
+}
+
+.home-bottom {
+    justify-content: center;
+    height: 10%;
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 2%  2%  2% 2%;
+    gap: 2%;
+    /* color: rgb(164, 149, 195); */
+    color: #B56576;
+    /* margin-left: -2%; */
+    /* margin: -3% -2% -2% -2%; */
+}  
 
 
 a {
     text-decoration: none;
   }
 
+/* LIGHT / DARK THEME BUTTON */
+.theme-button {
+    z-index: 999999;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    background: var(--transparent-color-01);
+    backdrop-filter: blur(20px);
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 5px 0 0 5px;
+    box-sizing: var(--box-shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-button .fa-sun {
+    display: none;
+}
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--scroll-bar-color);
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-color);
+    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+/* SCROLL BUTTON */
+/* .scroll-button {
+    z-index: 999999;
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    background: var(--first-color);
+    color: white;
+    font-size: var(--small-font-size);
+    border-radius: 3px;
+    cursor: pointer;
+} */
+
+/* COMMON STYLES */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* THEME */
+.dark-theme {
+    /* THEME COLORS */
+    --first-color: white;
+    --second-color: #121212;
+    --third-color: #8571AA;
+
+
+    /* BACKGROUND COLORS */
+    --body-bg-color: #121212;
+    --card-bg-color: #132347;
+    --modal-bg-color: #102048;
+    --bg-transparent-color: rgba(255, 255, 255, 0.1);
+    --transparent-color-01: rgba(255, 255, 255, 0.1);
+    /* --transparent-color-02: rgba(255, 255, 255, 0.1); */
+    --line-color: #454f6b;
+
+
+    /* COLOR FILTER */
+    --color-filter: invert(0);
+
+    /* SCROLL BAR COLORS */
+    --scroll-bar-color: #c1ceff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
 @media (max-width:900px) {
-    .recs {
+    /* .recs {
         display:none;
-    }
+    } */
     
 }
 
 @media (min-width:900px) {
-    .cards, .content {
+    /* .cards, .content {
         margin-left: 275px;
-        /* width:80%; */
-    }
+        
+    } */
     
 }

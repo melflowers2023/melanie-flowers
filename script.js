@@ -112,6 +112,28 @@ function choose(choice) {
         // setInterval(change, 3000);
         size = 'di1';
     }
-    
-    
+}
+
+const themeButton = document.getElementById("theme-button");
+console.log(themeButton);
+
+themeButton.addEventListener("click", () => {
+    document.body.classList.toggle('dark-theme')
+    themeButton.classList.toggle('sun');
+
+    localStorage.setItem('saved-theme', getCurrentTheme());
+    localStorage.setItem('saved-icon', getCurrentIcon());
+
+    console.log('clicked')
+})
+
+const getCurrentTheme = () => document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains('sun') ? 'sun' : 'moon';
+
+const savedTheme = localStorage.getItem('saved-theme');
+const savedIcon = localStorage.getItem('saved-icon');
+
+if(savedTheme) {
+    document.body.classList[savedTheme === 'dark' ? 'add' : 'remove']('dark-theme');
+    themeButton.classList[savedIcon === 'sun' ? 'add' : 'remove']('sun');
 }
