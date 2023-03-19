@@ -54,7 +54,7 @@ var TxtType = function(el, toRotate, period) {
          }
 
 
-        console.log(interval)
+        // console.log(interval)
         setInterval(change, interval);
         
         // INJECT CSS
@@ -74,7 +74,7 @@ function change() {
    imgElement.src = photos[index];
    
    index > 1 ? index = 0 : index++;
-   console
+   
 }
 
 let images2 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd3.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zdhome.PNG'];
@@ -86,7 +86,7 @@ let images3 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig3.gi
 let size = 'di1';
 let photos = images;
 function choose(choice) {
-    console.log(choice)
+    // console.log(choice)
     if (choice == 'zd') {
         photos = images2;
         // index = 2;
@@ -97,11 +97,11 @@ function choose(choice) {
     else if (choice == 'ig') {
         photos = images3;
         index = 2;
-        console.log(interval)
+        // console.log(interval)
         // interval = 7000;
         // clearInterval();
         // setInterval(change, 7000);
-        console.log(interval);
+        // console.log(interval);
         size = 'ig1';
         
     }
@@ -116,7 +116,7 @@ function choose(choice) {
 
 // DARK AND LIGHT THEME
 const themeButton = document.getElementById("theme-button");
-console.log(themeButton);
+// console.log(themeButton);
 
 themeButton.addEventListener("click", () => {
     document.body.classList.toggle('dark-theme')
@@ -125,7 +125,7 @@ themeButton.addEventListener("click", () => {
     localStorage.setItem('saved-theme', getCurrentTheme());
     localStorage.setItem('saved-icon', getCurrentIcon());
 
-    console.log('clicked')
+    // console.log('clicked')
 })
 
 const getCurrentTheme = () => document.body.classList.contains('dark-theme') ? 'dark' : 'light';
@@ -145,7 +145,7 @@ const navClose= document.getElementById('nav-close');
 const nav = document.getElementById('nav-box');
 const navItems = document.querySelectorAll('.nav-box a');
 
-console.log(navItems);
+// console.log(navItems);
 
 
 navOpen.addEventListener('click', () => {
@@ -181,3 +181,43 @@ window.addEventListener('scroll', () => {
     })
 })
 
+// APP DROPDOWN MENU
+var dropdown = document.querySelectorAll('.app-item');
+var dropdownArray = Array.prototype.slice.call(dropdown, 0);
+
+dropdownArray.forEach(function(element) {
+    var button = element.querySelector('.app-button'),
+        menu = element.querySelector('.app-about');
+        // arrow = button.querySelector('')
+
+    // console.log(menu);    
+
+    button.onclick = function(event) {
+        dropdownArray.forEach(function(element) {
+             console.log(button.id)
+            console.log('word')
+            choose(button.id)
+            if (element.querySelector('.app-button') == button) {
+                if(menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                    menu.classList.add('hide');
+                    // event.preventDefault();
+
+                }
+                else {
+                    menu.classList.add('show');
+                    menu.classList.remove('hide');
+                    // event.preventDefault();
+                }
+            }
+            else {
+                if(element.querySelector('.app-about').classList.contains('show')) {
+                    element.querySelector('.app-about').classList.remove('show');
+                    element.querySelector('.app-about').classList.add('hide');
+                    // event.preventDefault();
+                }
+            }
+            
+        })
+    }
+})

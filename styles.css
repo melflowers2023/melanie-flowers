@@ -385,6 +385,15 @@ section *{
 
 }
 
+.app-item  .show {
+   display: block;
+}
+
+.app-item  .hide {
+    display: none;
+ }
+ 
+
 .app-about {
     display: flex;
 }
