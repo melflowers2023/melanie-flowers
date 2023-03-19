@@ -114,6 +114,7 @@ function choose(choice) {
     }
 }
 
+// DARK AND LIGHT THEME
 const themeButton = document.getElementById("theme-button");
 console.log(themeButton);
 
@@ -137,3 +138,46 @@ if(savedTheme) {
     document.body.classList[savedTheme === 'dark' ? 'add' : 'remove']('dark-theme');
     themeButton.classList[savedIcon === 'sun' ? 'add' : 'remove']('sun');
 }
+
+// RESPONSIVE NAVIGATION MENU
+const navOpen = document.getElementById('nav-open');
+const navClose= document.getElementById('nav-close');
+const nav = document.getElementById('nav-box');
+const navItems = document.querySelectorAll('.nav-box a');
+
+console.log(navItems);
+
+
+navOpen.addEventListener('click', () => {
+    nav.classList.add('active');
+})
+
+navClose.addEventListener('click', () => {
+    nav.classList.remove('active');
+})
+
+navItems.forEach(element => {
+    element.addEventListener('click', () => {
+        nav.classList.remove('active');
+    })
+});
+
+// NAV BAR ITEMS ACTIVE ON SCROLL
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        let sectionHeight = current.offsetHeight;
+        let sectionTop = current.offsetTop - 60;
+        let id = current.getAttribute('id');  
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav-items a[href*=' + id + ']').classList.add('active');
+        }
+        else {
+            document.querySelector('.nav-items a[href*=' + id + ']').classList.remove('active');
+        }
+    })
+})
+

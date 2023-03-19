@@ -43,36 +43,47 @@
 
     </div>
     <div class="header-right">
-        <a href="#about" class="navigation">
-            
-                ABOUT 
-             
-        </a>
-        <a href="#projects" class="navigation">
-            <!-- <h2 class="white"> PROJECTS </h2> -->
-            PROJECTS
-        </a>
-        <a href="#skills" class="navigation">
-            <!-- <h2 class="white"> SKILLS </h2> -->
-            SKILLS
-        </a>
+        <div class="nav-box" id="nav-box">
+            <div class="nav-items">
+                <div class="nav-close" id="nav-close">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <a href="#home" class="active">
+                    HOME
+                </a>
+                <a href="#projects" >
+                    <!-- <h2 class="white"> PROJECTS </h2> -->
+                    PROJECTS
+                </a>
+                <a href="#skills" class=>
+                    <!-- <h2 class="white"> SKILLS </h2> -->
+                    SKILLS
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="nav-open" id="nav-open">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
     </div>
 
     
 </header>
 <body>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-top">
             <div class="home-left">
                 <div class="buttons">
                     <a href="https://linkedin.com/in/melanie-rose-flowers">
-                        <i class="fa fa-linkedin fa-xl" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin fa-xl home-button" aria-hidden="true"></i>
                     </a>
                     <a href="https://github.com/melflowers2023">
-                        <i class="fa-brands fa-github fa-xl"></i>
+                        <i class="fa-brands fa-github fa-xl home-button"></i>
                     </a>
                     <a href="mailto:melflowers2023@gmail.com">
-                        <i class="fa-regular fa-envelope fa-xl"></i>
+                        <i class="fa-regular fa-envelope fa-xl home-button"></i>
                     </a>
                 </div>
             </div>
@@ -88,16 +99,21 @@
                         ! 
                     </div>
                 </div>    
-                <div class="type"> 
-                    <p>
-                        Computer Science, Economics, and Classics Student at Northwestern University
-                    </p>
+                <div class="about-mel"> 
+                    
+                        <!-- Computer Science, Economics, and Classics Student at Northwestern University -->
+                        I am expected to graduate from Northwestern University in June 2023 with a double major in Computer 
+                        Science and Economics and a minor in Classics with a Latin Concentration.
+                        Outside of the classroom, I am President and Captain of Northwestern's Women's Club Basketball and Field Hockey teams,
+                        a Peer-Guided Study Group Facilitator, and a Peer Adviser. 
+                        After graduation, I hope to pursue Software
+                        Engineering. Please check out my experiences and skills below!
                 </div> 
             
             
             </div>
             <div class="home-right">
-                
+                <img src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources\melbasketballIG (1).png">
             </div>
     </div>
     <div class="home-bottom">
@@ -106,11 +122,14 @@
             <i class="fas fa-arrow-down"></i>
         </a>
     </div>
-    </section>
-        <hr class="hr2">
-        <section class="content">
-        <div class="secs" id="projects">
-            <h1 class="purple">Projects</h1>
+    </section >
+        <hr class="hr2" >
+        <section class="projects" id="projects">
+        <div class="secs"  >
+            <div>
+                <h1 class="multi">Projects</h1>
+            </div>
+            
             <div class="apps">
                 <div class="dininginformant">
         
@@ -151,7 +170,7 @@
             </div> 
         </div> 
     </section>
-    <hr class="hr2">
+    <!-- <hr class="hr2">
     <section class="content">
         <div class="secs" id="about">
             <h1 class="purple">About</h1>
@@ -165,11 +184,14 @@
             also served as a Peer Adviser for small groups of Northwestern's Class of 2025 and 2026.  
             </div> 
         </div>
-    </section>
+    </section> -->
         <hr class="hr3">
-        <section class="content">
-        <div class="secs" id ="skills">
-            <h1 class="purple">Skills</h1>
+        <section class="skills" id ="skills">
+        <div class="secs" >
+            <div>
+                <h1 class="multi">Skills</h1>
+            </div>
+            
             <div class="skills-all">
                 <div class="skills-list">
                     <div class="skills-icon">      
@@ -281,12 +303,12 @@
             </div>
             <div class="coursework">
                 <div>
-                    <h1 class="purple"> Coursework</h1>
+                    <h1 class="multi"> Coursework</h1>
                 </div>
                 <div class="all-courses">
                     <div class="courses-section">
                         <div class="course">
-                            <span style="font-size:100%;color:#8571AA;margin-bottom:100px;">&starf;</span>
+                            <span style="font-size:100%;margin-bottom:100px;">&starf;</span>
                             <div class="coursename">
                                 Agile Software Dev
                             </div>
