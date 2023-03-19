@@ -112,7 +112,7 @@ header {
 
 .header-right a {
     color: var(--second-color);
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .header-right a.active {
@@ -503,6 +503,11 @@ section *{
     /* flex-wrap: wrap; */
 }
 
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
 .all-courses {
     display: flex;
     flex-direction: column;
@@ -707,7 +712,7 @@ a {
     /* BACKGROUND COLORS */
     --body-bg-color: #121212;
     --card-bg-color: #132347;
-    --modal-bg-color: #8571AA;
+    --modal-bg-color: #141414;
     --bg-transparent-color: rgba(255, 255, 255, 0.1);
     --transparent-color-01: rgba(255, 255, 255, 0.1);
     /* --transparent-color-02: rgba(255, 255, 255, 0.1); */
@@ -787,7 +792,7 @@ a {
         transform: translateY(-50px);
         transition: .3s ease;
         color: var(--second-color);
-       gap: 25px;
+        gap: 25px;
     }
 
     .nav-box.active .nav-items {
@@ -796,10 +801,21 @@ a {
 
     .nav-items a{
         margin: 15px 50px;
+        color: var(--first-color);
+        font-weight: bolder;   
     }
 
     .nav-items a.active{
-        color: var(--first-color);
+        background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+         
+    }
+
+    .nav-items a:hover{
+        background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
     }
 
     .nav-close {
@@ -811,6 +827,7 @@ a {
         right: 0;
         margin: 10px;
         cursor: pointer;
+        color: var(--first-color);
     }
 
     .nav-open {
