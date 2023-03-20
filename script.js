@@ -169,7 +169,7 @@ window.addEventListener('scroll', () => {
 
     sections.forEach(current => {
         let sectionHeight = current.offsetHeight;
-        let sectionTop = current.offsetTop - 60;
+        let sectionTop = current.offsetTop - 70;
         let id = current.getAttribute('id');  
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -237,5 +237,6 @@ dropdownArray.forEach(function(element) {
             }
             
         })
+        
     }
 })
