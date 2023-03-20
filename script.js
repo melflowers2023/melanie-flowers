@@ -193,29 +193,47 @@ dropdownArray.forEach(function(element) {
     // console.log(menu);    
 
     button.onclick = function(event) {
-        dropdownArray.forEach(function(element) {
-             console.log(button.id)
-            console.log('word')
-            choose(button.id)
-            if (element.querySelector('.app-button') == button) {
-                if(menu.classList.contains('show')) {
-                    menu.classList.remove('show');
-                    menu.classList.add('hide');
+        dropdownArray.forEach(function(el) {
+            //  console.log(button.id)
+            // console.log('word')
+            choose(button.id);
+            console.log(menu);
+            console.log(button);
+            if (el.querySelector('.app-button') == button) {
+                if(!menu.classList.contains('show')) {
+                    // menu.classList.remove('show');
+                    // menu.classList.add('hide');
                     // event.preventDefault();
-
-                }
-                else {
                     menu.classList.add('show');
                     menu.classList.remove('hide');
-                    // event.preventDefault();
+                    button.classList.add('highlight');
+                    button.classList.remove('nolight');
+                    
                 }
+                // if(!button.classList.contains('highlight')) {
+                //     button.classList.add('highlight');
+                //     button.classList.remove('nolight');
+                // }
+                
+                // if(menu.classList.contains('show'))
+
             }
             else {
-                if(element.querySelector('.app-about').classList.contains('show')) {
-                    element.querySelector('.app-about').classList.remove('show');
-                    element.querySelector('.app-about').classList.add('hide');
+                // console.log(element.querySelector('.app-button'))
+                if(el.querySelector('.app-about').classList.contains('show')) {
+                    console.log(el.querySelector('.app-button'))
+                    el.querySelector('.app-about').classList.remove('show');
+                    el.querySelector('.app-about').classList.add('hide');
+                    el.querySelector('.app-button').classList.remove('highlight');
+                    el.querySelector('.app-button').classList.add('nolight');
+                   
                     // event.preventDefault();
                 }
+                // if(el.querySelector('.app-button').classList.contains('hightlight')) {
+                    
+                //     el.querySelector('.app-button').classList.remove('hightlight');
+                //     el.querySelector('.app-button').classList.add('nolight');
+                // }
             }
             
         })

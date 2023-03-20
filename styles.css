@@ -21,6 +21,9 @@
     /* COLOR FILTER */
     --color-filter: invert(1);
 
+    /* BRIGHTNESS FILTER */
+    --brightness-filter: 1;
+
     /* BOX SHADOW */
     --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
 
@@ -350,29 +353,57 @@ section *{
     backdrop-filter: blur(15px); */
     /* background: rgba(133, 113, 170, 0.5); */
     
-    background: rgba(211, 211, 211, 0.5);
+    background: rgba(211, 211, 211, 0.25);
     /* backdrop-filter: blur(15px); */
     border-radius: 25px;
+    /* border: solid red; */
+    
 }
 
 .app-item {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-.app-description .app-item span{
+.app-item .app-button{
     display: flex;
     flex-direction: column;
-    color: black;
+    color: var(--first-color);
     /* background: ; */
     font-size: 16px;
-    padding: 5px 30px;
+    /* padding: 5px 30px; */
     line-height: 60px;
+    width: 100%;
+    /* margin: -1%; */
+    /* margin: none; */
+   
+   
     
 }
 
-.app-description .app-item span:hover{
-    background: #8571AA;
+.app-button:hover{
+    background: var(--multi-color);
+    /* transition: 0.3s ease; */
+}
+
+.app-button-top:hover {
+    border-radius: 25px 25px  0 0;
+}
+
+.app-button.nolight {
+    background: none;
+    /* transition: 0.3s ease; */
+}
+
+.app-button.highlight {
+    background: var(--multi-color);
+    /* transition: 0.3s ease; */
+}
+
+.app-button-top{
+    border-radius: 25px 25px  0 0;
+    /* background: var(--multi-color); */
     /* transition: 0.3s ease; */
 }
 
@@ -382,7 +413,8 @@ section *{
     margin-left: 5px; */
     display: none;
     width: 98%;
-
+    margin: 10px;
+    color: var(--first-color);
 }
 
 .app-item  .show {
@@ -393,6 +425,7 @@ section *{
     display: none;
  }
  
+
 
 .app-about {
     display: flex;
@@ -445,6 +478,9 @@ section *{
     margin-right: 2%;
     align-items: center;
     border-radius: 50px;
+    filter: brightness(var(--brightness-filter));
+    /* filter: grayscale(50%); */
+    z-index: -10;
 }
 
 .ig1 {
@@ -525,16 +561,15 @@ h1 {
 span {
     height: fit-content;
     padding-right: 5px;
-
-    /* border: solid; */
 }
 
 .course {
     width: 25%;
     /* border: solid; */
     flex-wrap: nowrap;
-    height: 45px;
+    max-height: 50px;
     color: var(--first-color);
+    /* border: solid; */
     
 }
 
@@ -543,12 +578,13 @@ span {
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
     /* color: var(--multi-color); */
+
 }
 
 .coursename {
     height: fit-content;
     padding-top: 3px;
-    /* border: solid; */
+
     /* color: red; */
 }
 
@@ -730,6 +766,9 @@ a {
 
     /* COLOR FILTER */
     --color-filter: invert(0);
+
+    /* BRIGHTNESS FILTER */
+    --brightness-filter: .85;
 
     /* SCROLL BAR COLORS */
     --scroll-bar-color: #8571AA;
