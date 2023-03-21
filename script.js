@@ -48,10 +48,10 @@ var TxtType = function(el, toRotate, period) {
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        function change() {
-            imgElement.src = photos[index];
-            index > 1 ? index = 0 : index++;
-         }
+        // function change() {
+        //     imgElement.src = photos[index];
+        //     index > 1 ? index = 0 : index++;
+        //  }
 
 
         // console.log(interval)
@@ -64,28 +64,67 @@ var TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
 
+// APP SLIDESHOW
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  console.log(slides)
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}    
+
 let interval = 4000;
-let images = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/di2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/di3.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/dihome.PNG'];
+let images = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/dihome.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/di2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/di3.PNG'];
 let index = 0;
 const imgElement = document.querySelector('#mainPhoto');
+const imgElement0 = document.querySelector('#Photo0');
+const imgElement1 = document.querySelector('#Photo1');
+const imgElement2 = document.querySelector('#Photo2');
 
 function change() {
-    imgElement.className = size;
-   imgElement.src = photos[index];
+    imgElement0.className = size;
+    imgElement0.src = photos[0];
+
+    imgElement1.className = size;
+    imgElement1.src = photos[1];
+
+    imgElement2.className = size;   
+    imgElement2.src = photos[2];
    
-   index > 1 ? index = 0 : index++;
+   
    
 }
 
-let images2 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd3.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zdhome.PNG'];
+let images2 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zdhome.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd3.PNG'];
 let images3 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig3.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig4.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig1.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig2.gif']
 
-// window.onload = function () {
-//     setInterval(change, 5000);
-// };
+
 let size = 'di1';
 let photos = images;
 function choose(choice) {
+    showSlides(1);
     // console.log(choice)
     if (choice == 'zd') {
         photos = images2;
@@ -116,7 +155,6 @@ function choose(choice) {
 
 // DARK AND LIGHT THEME
 const themeButton = document.getElementById("theme-button");
-// console.log(themeButton);
 
 themeButton.addEventListener("click", () => {
     document.body.classList.toggle('dark-theme')
@@ -124,8 +162,6 @@ themeButton.addEventListener("click", () => {
 
     localStorage.setItem('saved-theme', getCurrentTheme());
     localStorage.setItem('saved-icon', getCurrentIcon());
-
-    // console.log('clicked')
 })
 
 const getCurrentTheme = () => document.body.classList.contains('dark-theme') ? 'dark' : 'light';
@@ -144,9 +180,6 @@ const navOpen = document.getElementById('nav-open');
 const navClose= document.getElementById('nav-close');
 const nav = document.getElementById('nav-box');
 const navItems = document.querySelectorAll('.nav-box a');
-
-// console.log(navItems);
-
 
 navOpen.addEventListener('click', () => {
     nav.classList.add('active');
@@ -189,84 +222,29 @@ dropdownArray.forEach(function(element) {
     var button = element.querySelector('.app-button'),
         menu = element.querySelector('.app-about');
         // arrow = button.querySelector('')
-
-    // console.log(menu);    
-
     button.onclick = function(event) {
         dropdownArray.forEach(function(el) {
-            //  console.log(button.id)
-            // console.log('word')
             choose(button.id);
             console.log(menu);
             console.log(button);
             if (el.querySelector('.app-button') == button) {
                 if(!menu.classList.contains('show')) {
-                    // menu.classList.remove('show');
-                    // menu.classList.add('hide');
-                    // event.preventDefault();
                     menu.classList.add('show');
                     menu.classList.remove('hide');
                     button.classList.add('highlight');
-                    button.classList.remove('nolight');
-                    
+                    button.classList.remove('nolight');   
                 }
-                // if(!button.classList.contains('highlight')) {
-                //     button.classList.add('highlight');
-                //     button.classList.remove('nolight');
-                // }
-                
-                // if(menu.classList.contains('show'))
-
             }
             else {
-                // console.log(element.querySelector('.app-button'))
                 if(el.querySelector('.app-about').classList.contains('show')) {
                     console.log(el.querySelector('.app-button'))
                     el.querySelector('.app-about').classList.remove('show');
                     el.querySelector('.app-about').classList.add('hide');
                     el.querySelector('.app-button').classList.remove('highlight');
                     el.querySelector('.app-button').classList.add('nolight');
-                   
-                    // event.preventDefault();
                 }
-                // if(el.querySelector('.app-button').classList.contains('hightlight')) {
-                    
-                //     el.querySelector('.app-button').classList.remove('hightlight');
-                //     el.querySelector('.app-button').classList.add('nolight');
-                // }
             }
-            
-        })
-        
+        })  
     }
 })
 
-// APP SLIDESHOW
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}

@@ -439,6 +439,7 @@ section *{
 
 .di1 {
     max-width: 300px;
+    width: 250px;
     height: fit-content;
     margin-right: 2%;
     align-items: center;
