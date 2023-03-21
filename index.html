@@ -133,9 +133,48 @@
             <div class="apps">
                 <div class="dininginformant">
         
-                    <div class="app-show">
-                        <img  class="di1"id="mainPhoto" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/dihome.PNG">
+                    <div class="projects-left">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img class="di1"id="Photo0" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/dihome.PNG" >
+                        <!-- <div class="text">Caption Text</div> -->
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img class="di1"id="Photo1" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/di2.PNG" style="width:100%">
+                        <!-- <div class="text">Caption Two</div> -->
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img class="di1"id="Photo2" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/di3.PNG" style="width:100%">
+                        <!-- <div class="text">Caption Three</div> -->
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
+                    <br>
+                    
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+
+                        <!-- <img  class="di1"id="Photo0" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/dihome.PNG">
+                        <img  class="di1"id="Photo1" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/di2.PNG">
+                        <img  class="di1"id="Photo2" src="C:\Users\melfl\OneDrive\Documents\melanie-flowers\sources/di3.PNG"> -->
+                    
                     <div class="app-description"> 
                         <div class="app-item">
                             <div id="di" class="app-button highlight app-button-top">   
@@ -165,7 +204,7 @@
                             </div>
                         </div>
                         <div class="app-item">
-                            <div id="di" class="app-button">ColorSomeThings.com</div>
+                            <div id="di" class="app-button app-button-bottom">ColorSomeThings.com</div>
                             <div class="app-about">
                                 this is a description for colorsomethings.com
                                 In progress SVG coloring book intended to teach 
