@@ -281,7 +281,14 @@ section *{
 .apps {
     width: 98%;
     /* min-height: 70%; */
+
 }
+
+.apps * {
+    margin: auto;
+
+}
+   
 
 .app-description {
     width: 30%;
@@ -289,7 +296,17 @@ section *{
     flex-direction: column;
     background: var(--card-bg-color);
     border-radius: 25px; 
-    height: fit-content;
+    /* height: fit-content; */
+    height: 600px;
+    /* margin: 0; */
+    margin-top: 35px;
+    max-width: 300px;
+
+}
+
+.app-description * {
+  margin: 0;
+    
 }
 
 .app-item {
@@ -439,9 +456,9 @@ section *{
 
 .di1 {
     max-width: 300px;
-    width: 250px;
+    /* width: 250px; */
     height: fit-content;
-    margin-right: 2%;
+    
     align-items: center;
     border-radius: 50px;
     filter: brightness(var(--brightness-filter));
@@ -450,9 +467,9 @@ section *{
 
 .ig1 {
     top: 0;
-    width: 400%;
-    max-width: 100%;
-    height: fit-content;
+    
+    /* height: fit-content; */
+    height: 600px;
 }
 
 .zendog {
@@ -828,6 +845,8 @@ a {
 /* Hide the images by default */
 .mySlides {
   display: none;
+  width: 800px;
+  /* border: solid; */
 }
 
 /* Next & previous buttons */
@@ -849,29 +868,33 @@ a {
   color: white;
   cursor: pointer;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
-  color: var(--first-color);
+  color: var(--second-color);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 30%;
+  border-radius: 35% 0 0 35%;
   height: fit-content;
-  margin-top: 65%;
+  margin-top: 260px;
   background-color: var(--card-bg-color);
+  background: var(--multi-color);
+  border: solid;
+  /* background-color: var(--multi-color); */
+
 
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 35% 35% 0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: var(--first-color);
-  color: var(--second-color);
+  color: var(--first-color);
 }
 
 /* Caption text */
@@ -904,10 +927,14 @@ a {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  
+  color: var(--second-color);
+  border: solid;
 }
 
 .dot.active, .dot:hover {
-  background-color: #717171;
+  background: var(--multi-color);
+  color: var(--first-color);
 }
 
 

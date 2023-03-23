@@ -119,7 +119,7 @@ function change() {
 
 let images2 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zdhome.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd3.PNG'];
 let images3 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig3.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig4.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig1.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig2.gif']
-
+let images4 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/cb1.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/cb2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/cb3.PNG'];
 
 let size = 'di1';
 let photos = images;
@@ -136,6 +136,17 @@ function choose(choice) {
     else if (choice == 'ig') {
         photos = images3;
         index = 2;
+        // console.log(interval)
+        // interval = 7000;
+        // clearInterval();
+        // setInterval(change, 7000);
+        // console.log(interval);
+        size = 'ig1';
+        
+    }
+    else if (choice == 'cb') {
+        photos = images4;
+        index = 1;
         // console.log(interval)
         // interval = 7000;
         // clearInterval();
