@@ -96,7 +96,7 @@ function showSlides(n) {
 }    
 
 let interval = 4000;
-let images = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/dihome.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/di2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/di3.PNG'];
+let images = ['sources/dihome.PNG', 'sources/di2.PNG', 'sources/di3.PNG'];
 let index = 0;
 const imgElement = document.querySelector('#mainPhoto');
 const imgElement0 = document.querySelector('#Photo0');
@@ -117,9 +117,9 @@ function change() {
    
 }
 
-let images2 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zdhome.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/zd3.PNG'];
-let images3 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig3.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig4.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig1.gif', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/ig2.gif']
-let images4 = ['C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/cb1.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/cb2.PNG', 'C:/Users/melfl/OneDrive/Documents/melanie-flowers/sources/cb3.PNG'];
+let images2 = ['sources/zdhome.PNG', 'sources/zd2.PNG', 'sources/zd3.PNG'];
+let images3 = ['sources/cb1.PNG', 'sources/ig4.gif', 'sources/ig1.gif', 'sources/ig2.gif']
+let images4 = ['sources/cb1.PNG', 'sources/cb2.PNG', 'sources/cb3.PNG'];
 
 let size = 'di1';
 let photos = images;
