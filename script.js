@@ -168,22 +168,22 @@ function choose(choice) {
 const themeButton = document.getElementById("theme-button");
 
 themeButton.addEventListener("click", () => {
-    document.body.classList.toggle('dark-theme')
-    themeButton.classList.toggle('sun');
+    document.body.classList.toggle('light-theme')
+    themeButton.classList.toggle('moon');
 
     localStorage.setItem('saved-theme', getCurrentTheme());
     localStorage.setItem('saved-icon', getCurrentIcon());
 })
 
-const getCurrentTheme = () => document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-const getCurrentIcon = () => themeButton.classList.contains('sun') ? 'sun' : 'moon';
+const getCurrentTheme = () => document.body.classList.contains('light-theme') ? 'light' : 'dark';
+const getCurrentIcon = () => themeButton.classList.contains('moon') ? 'moon' : 'sun';
 
 const savedTheme = localStorage.getItem('saved-theme');
 const savedIcon = localStorage.getItem('saved-icon');
 
 if(savedTheme) {
-    document.body.classList[savedTheme === 'dark' ? 'add' : 'remove']('dark-theme');
-    themeButton.classList[savedIcon === 'sun' ? 'add' : 'remove']('sun');
+    document.body.classList[savedTheme === 'sun' ? 'add' : 'remove']('light-theme');
+    themeButton.classList[savedIcon === 'moon' ? 'add' : 'remove']('moon');
 }
 
 // RESPONSIVE NAVIGATION MENU
