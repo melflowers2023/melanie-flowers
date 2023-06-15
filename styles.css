@@ -141,8 +141,8 @@ body {
     font-family: 'sans-serif';
     font-family: 'Open Sans', serif;
     background-color: var(--body-bg-color);
-    /* width: 96%; */
-    /* padding: 2%; */
+    width: 96%; 
+    padding: 2%;
     margin-top: 70px;
     overflow-x: hidden;
     width: 100%;
