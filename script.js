@@ -259,3 +259,41 @@ dropdownArray.forEach(function(element) {
     }
 })
 
+const circles = [
+    { x: 400, y: 200, xSpeed: 0.2, ySpeed: 0.34 },
+    { x: 600, y: 400, xSpeed: -0.5, ySpeed: 0.5 },
+    { x: 800, y: 600, xSpeed: 0.3, ySpeed: 0.6 },
+    { x: 1000, y: 500, xSpeed: -0.1, ySpeed: 0.6 },
+    { x: 900, y: 300, xSpeed: -0.2, ySpeed: 0.3 }
+  ];
+  
+  function updateCirclePosition(circle) {
+    circle.x += circle.xSpeed;
+    circle.y += circle.ySpeed;
+    if (circle.x < -150) {
+      circle.x = window.innerWidth + 100;
+    } else if (circle.x > window.innerWidth + 100) {
+      circle.x = -150;
+    }
+    if (circle.y < -150) {
+      circle.y = window.innerHeight + 100;
+    } else if (circle.y > window.innerHeight + 100) {
+      circle.y = -150;
+    }
+  }
+  
+  function animate() {
+    circles.forEach((circle, index) => {
+      updateCirclePosition(circle);
+      const circleElement = document.getElementById(`circle${index + 1}`);
+      circleElement.setAttribute('cx', circle.x);
+      circleElement.setAttribute('cy', circle.y);
+    });
+  }
+  
+  function startAnimation() {
+    setInterval(animate, 10);
+  }
+  
+  window.onload = startAnimation;
+

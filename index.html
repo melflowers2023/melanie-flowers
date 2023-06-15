@@ -49,10 +49,52 @@
 </header>
 
 <body>
+    <div class="background"></div>
+    <div class="metaballs">
+        <svg class="metasvg">
+          <defs>
+            <filter id="gooify" width="400%" x="-10%" height="400%" y="-150%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0
+                       0 1 0 0 0
+                       0 0 1 0 0
+                       0 0 0 25 -10"
+              />
+            </filter>
     
+            <linearGradient id="lavaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e73c7e" />
+              <stop offset="100%" stop-color="#23a6d5" />
+            </linearGradient>
+          </defs>
+    
+          <g filter="url(#gooify)">
+            <circle id="circle1" class="blobb glow" cx="400" cy="200" r="170" />
+            <circle id="circle2" class="blobb glow" cx="600" cy="400" r="90" />
+            <circle id="circle3" class="blobb glow" cx="800" cy="600" r="120" />
+            <circle id="circle4" class="blobb glow" cx="1000" cy="500" r="140" />
+            <circle id="circle5" class="blobb glow" cx="900" cy="300" r="70" />
+          </g>
+        </svg>
+      </div>
     <section class="home" id="home">
         <div class="home-top">
-            <div class="home-left">
+           
+            <div class="home-middle">
+                <div class="name">
+                    <div class="first">
+                        Hi, I'm  
+                    </div>
+                    <div class="last"> 
+                        Melanie 
+                    </div>
+                    <div class="first">
+                        ! 
+                    </div>
+                </div>    
                 <div class="buttons">
                     <a href="https://linkedin.com/in/melanie-rose-flowers">
                         <i class="fa fa-linkedin fa-xl home-button" aria-hidden="true"></i>
@@ -70,32 +112,17 @@
                     
                     
                 </div>
-            </div>
-            <div class="home-middle">
-                <div class="name">
-                    <div class="first">
-                        Hi, I am  
-                    </div>
-                    <div class="last"> 
-                        MEL 
-                    </div>
-                    <div class="first">
-                        ! 
-                    </div>
-                </div>    
-                <div class="about-mel"> 
+                <!-- <div class="about-mel"> 
                         I am expected to graduate from Northwestern University in June 2023 with a double major in Computer 
                         Science and Economics and a minor in Classics with a Latin Concentration.
                         Outside of the classroom, I am President and Captain of Northwestern's Club Women's Basketball and 
                         Field Hockey teams, a Peer-Guided Study Group Facilitator, and a Peer Adviser. 
                         After graduation, I hope to pursue Software
                         Engineering. Please check out my experiences and skills below. Feel free to  
-                        contact me or download my resume through the bottons on the left!
-                </div> 
+                        contact me or download my resume through the bottons on the left! -->
+                <!-- </div>  -->
             </div>
-            <div class="home-right">
-                <!-- <img src="sources\melbasketballIG (1).png"> -->
-            </div>
+            
         </div>
         <div class="home-bottom">
             <a href="#projects" class="scroll-down"> 
