@@ -297,3 +297,10 @@ const circles = [
   
   window.onload = startAnimation;
 
+  function scrollToProjects() {
+    var targetElement = document.getElementById("projects");
+    var offset = -(window.innerHeight * 0.08); // Adjust the offset as desired (8vh in this case)
+
+    targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest", offsetTop: offset });
+  }
+
