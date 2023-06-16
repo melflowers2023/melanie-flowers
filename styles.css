@@ -1,6 +1,6 @@
 :root {
     /* THEME COLORS */
-    --first-color: white;
+    --first-color: #D3D3D3;
     --second-color: #121212;
     --third-color: #D3D3D3;
 
@@ -215,6 +215,7 @@ section *{
     margin: auto;
     justify-content: center;
     align-items: center;
+    opacity: 1;
 
 }
 
@@ -323,14 +324,15 @@ section *{
 
 .app-description {
     
-    width: 300px;
+    
+
     display: flex;
     flex-direction: column;
     background: var(--card-bg-color);
     border-radius: 25px; 
     height: 600px;
     max-height: 75vh;
-    max-width: 300px;
+    margin: 5%;
     margin-top: 0;
 }
 
@@ -704,8 +706,8 @@ a {
 /* THEME */
 .light-theme {
 /* THEME COLORS */
---first-color: black;
---second-color: white;
+--first-color: #121212;
+--second-color: #fefefe;
 --third-color: #5A5A5A;
 
 --multi-color: linear-gradient(-45deg, #e73c7e, #23a6d5);
@@ -717,7 +719,7 @@ a {
 /* BACKGROUND COLORS */
 --body-bg-color: #fefefe;
 --card-bg-color:  rgba(211, 211, 211, 0.7);;
---modal-bg-color: white;
+--modal-bg-color: #fefefe;
 --transparent-color-01: rgba(0, 0, 0, 0.1);
 --line-color: #d7d7d7;
 
@@ -885,6 +887,10 @@ a {
     .projects-left {
         width: 50%;
     }  
+.app-description {
+    width: 300px;
+    max-width: 300px;
+}
 }
 
 ::-webkit-scrollbar-thumb {
