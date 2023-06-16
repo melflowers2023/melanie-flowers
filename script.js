@@ -81,7 +81,7 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  console.log(slides)
+//   console.log(slides)
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -162,6 +162,7 @@ function choose(choice) {
         // setInterval(change, 3000);
         size = 'di1';
     }
+    change();
 }
 
 // DARK AND LIGHT THEME
@@ -235,9 +236,10 @@ dropdownArray.forEach(function(element) {
         // arrow = button.querySelector('')
     button.onclick = function(event) {
         dropdownArray.forEach(function(el) {
+            console.log(button.id)
             choose(button.id);
-            console.log(menu);
-            console.log(button);
+            // console.log(menu);
+            // console.log(button);
             if (el.querySelector('.app-button') == button) {
                 if(!menu.classList.contains('show')) {
                     menu.classList.add('show');
@@ -248,7 +250,7 @@ dropdownArray.forEach(function(element) {
             }
             else {
                 if(el.querySelector('.app-about').classList.contains('show')) {
-                    console.log(el.querySelector('.app-button'))
+                    // console.log(el.querySelector('.app-button'))
                     el.querySelector('.app-about').classList.remove('show');
                     el.querySelector('.app-about').classList.add('hide');
                     el.querySelector('.app-button').classList.remove('highlight');
