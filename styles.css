@@ -930,13 +930,38 @@ a {
     background: var(--first-color);
 }
 
+p {
+    
+    line-height: 2.5vw;
+    font-size: 1.6vw;
+  }
+
+  .bold-larger {
+    font-weight: bold;
+    font-size: 2.2vw;
+    white-space: pre-wrap;
+    display: inline-block;
+  } 
+
 
 @media (max-width:700px) {
     .skills-top {
         flex-direction: column;
         /* width: 100%; */
-        border: solid green;
+        /* border: solid green; */
     }   
+    p {
+    
+        line-height: 4vw;
+        font-size: 3.2vw;
+      }
+      .bold-larger {
+        
+        font-size: 3.8vw;
+        
+      } 
+
+    
 
     .skills-left {
         width: 60%;
@@ -1148,12 +1173,7 @@ a {
     line-height: 1.8em;
 }
 
-.bold-larger {
-    font-weight: bold;
-    font-size: 2.2vw;
-    white-space: pre-wrap;
-    display: inline-block;
-  }
+
 
   .normal-text {
     white-space: pre-wrap;
@@ -1177,14 +1197,14 @@ a {
     -webkit-background-clip: text;
 }
 
-  p {
+p {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     display: inline-block;
-    line-height: 2.5vw;
-    font-size: 1.6vw;
+    
   }
+  
 
   span {
     display: inline-block;
