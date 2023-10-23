@@ -4,10 +4,10 @@
     --second-color: #121212;
     --third-color: #D3D3D3;
 
-    --multi-color: linear-gradient(-45deg, #e73c7e, #23a6d5);
-    --pink-color: #e73c7e;
-    --blue-color: #23a6d5;
-    --purple-color: #8571AA;
+    --multi-color: linear-gradient(-45deg, #4c3228, #bca89f);
+    --pink-color: #4c3228;
+    --blue-color: #bca89f;
+    --purple-color: #765C50;
 
 
     /* BACKGROUND COLORS */
@@ -69,7 +69,7 @@ header {
     top: 0;
     width: 100%;
     height: 8vh;
-    background: linear-gradient(-45deg, #e73c7e, #23a6d5);
+    background: var(--multi-color);
     background-size: 400% 400%;
     animation: gradient 22s ease infinite;
     display: flex;
@@ -126,7 +126,7 @@ body {
 
 hr {
     height: 2vh;
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
     background-size: 400% 400%;
     animation: gradient 22s ease infinite;
     border: none;
@@ -167,7 +167,7 @@ button {
 }
 
 .purple {
-    color: #8571AA;
+    color: var(--purple-color);
 }
 
 .multi {
@@ -285,7 +285,7 @@ section *{
 
 .scroll-down:hover,
 .scroll-down:hover i { /* Update this line */
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -356,14 +356,14 @@ section *{
     line-height: 60px;
     width: 100%;  
     font-size: large;
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
 }
 
 .app-button:hover{
     background: none;
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
             -webkit-text-fill-color: var(--first-color);
             -webkit-background-clip: none;
     background: var(--multi-color);
@@ -378,17 +378,17 @@ section *{
 }
 
 .app-button.nolight {   
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;        
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: lvar(--multi-color);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;   
 }
 
 .app-button.nolight:hover {   
     background: none;
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
             -webkit-text-fill-color: var(--first-color);
             -webkit-background-clip: none;
     background: var(--multi-color);
@@ -400,7 +400,7 @@ section *{
 
 .app-button.highlight {
     background: none;
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
             -webkit-text-fill-color: var(--first-color);
             -webkit-background-clip: none;
     background: var(--multi-color);
@@ -521,6 +521,8 @@ section *{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 80%;
+    /* border: solid green; */
 
 }
 
@@ -583,7 +585,7 @@ span {
 }
 
 .course span {
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
 }
@@ -708,7 +710,7 @@ a {
 }
 
 .app-about a:hover {
-   background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+   background: var(--multi-color);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; 
 
@@ -720,10 +722,10 @@ a {
 --first-color: #121212;
 --second-color: #fefefe;
 --third-color: #5A5A5A;
-
---multi-color: linear-gradient(-45deg, #e73c7e, #23a6d5);
---pink-color: #e73c7e;
---blue-color: #23a6d5;
+/* 244 196  48*/
+--multi-color: linear-gradient(-45deg, #4c3228, #bca89f);
+--pink-color: #4c3228;
+--blue-color: #bca89f;
 --purple-color: #8571AA;
 
 
@@ -814,13 +816,13 @@ a {
     }
 
     .nav-items a.active{
-        background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+        background: var(--multi-color);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text; 
     }
 
     .nav-items a:hover{
-        background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+        background: var(--multi-color);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
 
@@ -943,12 +945,29 @@ p {
     display: inline-block;
   } 
 
+  .big {
+    font-weight: bold;
+    font-size: 1.2em;
+    height: 10%;
+    padding-top: 1%;
+    /* border: solid red; */
+    justify-content: flex-end;
+    /* white-space: pre-wrap; */
+    /* display: inline-block; */
+  }
+
+  .skills-top {
+    height: 80%;
+    /* border: solid purple; */
+  }
+
 
 @media (max-width:700px) {
     .skills-top {
         flex-direction: column;
         /* width: 100%; */
         /* border: solid green; */
+
     }   
     p {
     
@@ -1192,7 +1211,7 @@ p {
 
   .multi-real {
     display: inline-block;
-    background: linear-gradient(-45deg,  #e73c7e, #23a6d5);
+    background: var(--multi-color);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
